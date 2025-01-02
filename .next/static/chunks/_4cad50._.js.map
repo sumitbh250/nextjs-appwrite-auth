@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/sumit/workspace/nextjs-apps/nextjs-appwrite-auth/src/app/%28pages%29/%28protected%29/layout.tsx"],"sourcesContent":["\"use client\"\nimport useAuth from \"@/context/useAuth\"\nimport { useRouter } from \"next/navigation\"\n\nimport React from \"react\"\n\nconst ProtectedLayout = ({\n    children,\n  }: {\n    children: React.ReactNode\n  }) => {\n\n    const router = useRouter();\n    const { authStatus } = useAuth();\n\n    if (!authStatus) {\n        router.replace(\"/login\");\n        return <></>;\n    }\n    return children\n\n}\n\nexport default ProtectedLayout;"],"names":[],"mappings":";;;;AACA;AACA;;;AAFA;;;AAMA,MAAM,kBAAkB,CAAC,EACrB,QAAQ,EAGT;;IAEC,MAAM,SAAS,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IACvB,MAAM,EAAE,UAAU,EAAE,GAAG,CAAA,GAAA,4HAAA,CAAA,UAAO,AAAD;IAE7B,IAAI,CAAC,YAAY;QACb,OAAO,OAAO,CAAC;QACf,qBAAO;IACX;IACA,OAAO;AAEX;GAfM;;QAMa,qIAAA,CAAA,YAAS;QACD,4HAAA,CAAA,UAAO;;;KAP5B;uCAiBS"}},
+    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":["file:///home/sumit/workspace/nextjs-apps/nextjs-appwrite-auth/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

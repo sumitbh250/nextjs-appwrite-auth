@@ -1,0 +1,3 @@
+{
+  "/(pages)/logout/page": "app/(pages)/logout/page.js"
+}

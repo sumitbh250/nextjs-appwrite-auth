@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/sumit/workspace/nextjs-apps/nextjs-appwrite-auth/src/app/%28pages%29/logout/page.tsx"],"sourcesContent":["\"use client\";\nimport appwriteService from \"@/appwrite/config\";\nimport useAuth from \"@/context/useAuth\";\nimport { useRouter } from \"next/navigation\";\nimport React, {useEffect} from \"react\";\n\nconst LogoutPage = () => {\n    const router = useRouter();\n    const {setAuthStatus} = useAuth();\n\n    useEffect(() => {\n        appwriteService.logout()\n        .then(() => {\n            setAuthStatus(false);\n            router.replace(\"/\");\n        })\n    }, []);\n\n    return(\n        <></>\n    )\n}\n\n\nexport default LogoutPage;"],"names":[],"mappings":";;;;AACA;AACA;AACA;AACA;;;AAJA;;;;;AAMA,MAAM,aAAa;;IACf,MAAM,SAAS,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IACvB,MAAM,EAAC,aAAa,EAAC,GAAG,CAAA,GAAA,4HAAA,CAAA,UAAO,AAAD;IAE9B,CAAA,GAAA,6JAAA,CAAA,YAAS,AAAD;gCAAE;YACN,4HAAA,CAAA,UAAe,CAAC,MAAM,GACrB,IAAI;wCAAC;oBACF,cAAc;oBACd,OAAO,OAAO,CAAC;gBACnB;;QACJ;+BAAG,EAAE;IAEL,qBACI;AAER;GAfM;;QACa,qIAAA,CAAA,YAAS;QACA,4HAAA,CAAA,UAAO;;;KAF7B;uCAkBS"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 61, "column": 0}, "map": {"version":3,"sources":["file:///home/sumit/workspace/nextjs-apps/nextjs-appwrite-auth/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}},
+    {"offset": {"line": 62, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
